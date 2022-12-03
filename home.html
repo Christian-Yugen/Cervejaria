@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervejaria do Pericles Delivery</title>
+    <script>
+        function valida_idade() {
+            const url = new URLSearchParams(window.loca.search)
+            let acesso = url.get('acesso')
+
+            if (acesso == 1) {
+                document.getElementById("textoEntrada").innerHTML = "Ola! Gostaria de dar as boas-vidas a cervejaria do Pericles."
+                //Mostrar mensagem de boas vindas -> tem mais de 18 anos    
+            } else
+                document.getElementById("textoEntrada").innerHTML = "Sinto muito, mas este site so é permitido para maiores de 18 anos de idade! :("
+            //Mostrar mensagem de boas vindas -> tem menos de 18 anos 
+            }
+        }
+    </script>
+
+</head>
+<body onload="valida_entrada()">
+    <h1 id="textoEntrada"></h1>
+</body>
+
+</html>
